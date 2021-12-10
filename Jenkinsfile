@@ -15,7 +15,14 @@ pipeline {
 
     stage('Spiel1 erstellen') {
       steps {
-        sh '/var/lib/jenkins/2BL/configfile/part3.sh 0 $SPIELNUMMER1 $ANLAGE1'
+        sh '''/var/lib/jenkins/2BL/configfile/part3.sh 0 $SPIELNUMMER1 $ANLAGE1
+'''
+      }
+    }
+
+    stage('Spiel2 erstellen') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part3.sh 1 $SPIELNUMMER2 $ANLAGE2'
       }
     }
 
