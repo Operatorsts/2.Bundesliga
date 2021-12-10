@@ -26,6 +26,51 @@ pipeline {
       }
     }
 
+    stage('Speil3 erstellen') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part3.sh 2 $SPIELNUMMER3 $ANLAGE3'
+      }
+    }
+
+    stage('Spiel4 erstellen') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part3.sh 3 $SPIELNUMMER4 $ANLAGE4'
+      }
+    }
+
+    stage('Spiel5 erstellen') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part3.sh 4 $SPIELNUMMER5 $ANLAGE5'
+      }
+    }
+
+    stage('Spiel6 erstellen') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part3.sh 5 $SPIELNUMMER6 $ANLAGE6'
+      }
+    }
+
+    stage('Spiel 7 erstellen') {
+      steps {
+        sh '''/var/lib/jenkins/2BL/configfile/part3.sh 6 $SPIELNUMMER7 $ANLAGE7
+'''
+      }
+    }
+
+    stage('Spiel8 erstellen') {
+      steps {
+        sh '''/var/lib/jenkins/2BL/configfile/part3.sh 7 $SPIELNUMMER8 $ANLAGE8
+'''
+      }
+    }
+
+    stage('Spiel9 erstellen') {
+      steps {
+        sh '''/var/lib/jenkins/2BL/configfile/part3.sh 8 $SPIELNUMMER9 $ANLAGE9
+'''
+      }
+    }
+
   }
   environment {
     SPIELNUMMER1 = '180201'
