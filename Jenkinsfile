@@ -9,7 +9,7 @@ pipeline {
 
     stage('erstelle config part1') {
       steps {
-        sh '/var/lib/jenkins/2BL/configfile/part1.sh'
+        sh '/var/lib/jenkins/2BL/configfile/part4.sh'
       }
     }
 
