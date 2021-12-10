@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('erstelle config part1') {
+    stage('part1') {
       steps {
         sh '/var/lib/jenkins/2BL/configfile/part4.sh'
       }
@@ -71,6 +71,18 @@ pipeline {
       }
     }
 
+    stage('part2') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part2.sh $VAR_RUNDE $VAR_JAHR $VAR_ART'
+      }
+    }
+
+    stage('step3') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/part1.sh'
+      }
+    }
+
   }
   environment {
     SPIELNUMMER1 = '180201'
@@ -91,5 +103,8 @@ pipeline {
     ANLAGE8 = '#'
     SPIELNUMMER9 = '#'
     ANLAGE9 = '#'
+    VAR_ART = '52'
+    VAR_RUNDE = '18'
+    VAR_JAHR = '01.01.2021'
   }
 }
